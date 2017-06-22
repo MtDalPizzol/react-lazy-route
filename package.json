@@ -1,0 +1,45 @@
+{
+  "name": "react-lazy-route",
+  "version": "0.0.0",
+  "description": "A simple yet elegant wrapper around react-router-dom's Route to lazy load components",
+  "keywords": [
+    "react-router",
+    "lazy load route",
+    "async route"
+  ],
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "webpack -p"
+  },
+  "author": "Matheus Dal'Pizzol <matheusdalpizzol@gmail.com>",
+  "homepage": "https://github.com/MtDalPizzol/react-lazy-route",
+  "bugs": "https://github.com/MtDalPizzol/react-lazy-route/issues",
+  "repository": {
+    "url": "https://github.com/MtDalPizzol/react-lazy-route.git",
+    "type": "git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.1.0",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-preset-env": "^1.5.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-config-standard-react": "^5.0.0",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-node": "^5.0.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^7.0.1",
+    "eslint-plugin-standard": "^3.0.1",
+    "webpack": "^3.0.0"
+  },
+  "dependencies": {
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-router-dom": "^4.1.1"
+  }
+}

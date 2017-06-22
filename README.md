@@ -57,7 +57,7 @@ You can use the same props available for the [**Route**](https://reacttraining.c
 LazyRoute takes two additional props.
 
 | Prop  | Required | Description | Default
-| ------------- | ------------- | ----- |
+| ---- | --- | ---- | ---- |
 | render | Required | A function that returns a `Promise` which resolves with the module. | N/A |
 | onLoading | Optional | A component or an element to show while the lazy component is loading. | `null` |
 | onError | Optional | A component or an element to show if the lazy component couldn't be loaded. | `<div className="lazy-route-error" />` |

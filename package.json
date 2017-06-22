@@ -1,6 +1,6 @@
 {
   "name": "react-lazy-route",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A simple yet elegant wrapper around react-router-dom's Route to lazy load components",
   "keywords": [
     "react-router",

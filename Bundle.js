@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 class Bundle extends Component {
   state = {
@@ -20,18 +21,12 @@ class Bundle extends Component {
     this.setState({
       mod: null
     })
-    // props.load((mod) => {
-    //   this.setState({
-    //     // handle both es imports and cjs
-    //     mod: mod.default ? mod.default : mod
-    //   })
-    // })
     props
       .load()
       .then((mod) => {
         this.setState({
           // handle both es imports and cjs
-          mod: mod.default ? mod.default : mod
+          mod: (mod && mod.default) ? mod.default : mod
         })
       })
       .catch((err) => {
@@ -43,9 +38,14 @@ class Bundle extends Component {
 
   render () {
     if (this.state.error) {
-      return this.props.children(null, this.state.error)
+      return this.props.children(this.state.error, null)
     }
-    return this.state.mod ? this.props.children(this.state.mod) : null
+    return this.props.children(null, this.state.mod || null)
+  }
+
+  static propTypes = {
+    load: PropTypes.func,
+    children: PropTypes.func
   }
 }
 
